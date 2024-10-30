@@ -4,9 +4,301 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/output.css" />
   </head>
   <body>
-    <h1 class="text-3xl font-bold text-pink-400 underline">Hello world!</h1>
+    <div class="container">
+      <div class="p-36">
+        <h2 class="title">Bài tập vòng lặp</h2>
+        <div class="shadow-xl">
+          <div class="mb-4 border-b border-gray-200">
+            <ul
+              class="flex flex-wrap -mb-px text-sm font-medium text-center"
+              id="default-styled-tab"
+              data-tabs-toggle="#default-styled-tab-content"
+              data-tabs-active-classes="text-white bg-gray-500"
+              data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+              role="tablist"
+            >
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg"
+                  id="profile-styled-tab"
+                  data-tabs-target="#bai1"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                >
+                  Bài 1
+                </button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="dashboard-styled-tab"
+                  data-tabs-target="#bai2"
+                  type="button"
+                  role="tab"
+                  aria-controls="dashboard"
+                  aria-selected="false"
+                >
+                  Bài 2
+                </button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="settings-styled-tab"
+                  data-tabs-target="#bai3"
+                  type="button"
+                  role="tab"
+                  aria-controls="settings"
+                  aria-selected="false"
+                >
+                  Bài 3
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="contacts-styled-tab"
+                  data-tabs-target="#bai4"
+                  type="button"
+                  role="tab"
+                  aria-controls="contacts"
+                  aria-selected="false"
+                >
+                  Bài 4
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="contacts-styled-tab"
+                  data-tabs-target="#bai5"
+                  type="button"
+                  role="tab"
+                  aria-controls="contacts"
+                  aria-selected="false"
+                >
+                  Bài 5
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="contacts-styled-tab"
+                  data-tabs-target="#bai6"
+                  type="button"
+                  role="tab"
+                  aria-controls="contacts"
+                  aria-selected="false"
+                >
+                  Bài 6
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="contacts-styled-tab"
+                  data-tabs-target="#bai7"
+                  type="button"
+                  role="tab"
+                  aria-controls="contacts"
+                  aria-selected="false"
+                >
+                  Bài 7
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                  id="contacts-styled-tab"
+                  data-tabs-target="#bai8"
+                  type="button"
+                  role="tab"
+                  aria-controls="contacts"
+                  aria-selected="false"
+                >
+                  Bài 8
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div id="default-styled-tab-content">
+            <!-- Bài 1 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="bai1"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              <h1 class="title">
+                In tất cả số nguyên dương lẻ / chẵn nhỏ hơn 100
+              </h1>
+
+              <button id="btnBai1" class="btn mt-6">In</button>
+              <div id="result1" class="p-4 bg-gray-400 rounded-md mt-6">
+                Result: <span></span>
+              </div>
+            </div>
+            <!-- Bài 2 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800"
+              id="bai2"
+              role="tabpanel"
+              aria-labelledby="dashboard-tab"
+            >
+              <h1 class="title">
+                Tính tổng các số chẵn từ 1 đến n. Với n nhập từ người dùng
+              </h1>
+              <div class="flex space-x-4 items-center">
+                <span> n =</span>
+                <input
+                  id="input2"
+                  class="rounded-md"
+                  type="text"
+                  placeholder="Nhập số"
+                />
+              </div>
+              <button id="btnBai2" class="btn mt-6">Kết quả</button>
+              <div id="result2" class="p-4 bg-gray-400 rounded-md mt-6">
+                Result: <span></span>
+              </div>
+            </div>
+            <!-- Bài 3 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50"
+              id="bai3"
+              role="tabpanel"
+              aria-labelledby="settings-tab"
+            >
+              <h1 class="title">Có bao nhiêu số chia hết cho 3 từ 0-1000</h1>
+
+              <button id="btnBai3" class="btn mt-6">Kết quả</button>
+              <div id="result3" class="p-4 bg-gray-400 rounded-md mt-6">
+                Result: <span></span>
+              </div>
+            </div>
+
+            <!-- Bài 4 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50"
+              id="bai4"
+              role="tabpanel"
+              aria-labelledby="contacts-tab"
+            >
+              <h1 class="title">
+                Nhấn nút tạo ra 10 thẻ div. Div nào vị trí chẵn thì background
+                màu đỏ và lẻ thì background màu xanh
+              </h1>
+              <div id="newDiv"></div>
+
+              <button id="btnBai4" class="btn mt-6">Tạo ra 10 thẻ div</button>
+            </div>
+            <!-- Bài 5 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50"
+              id="bai5"
+              role="tabpanel"
+              aria-labelledby="contacts-tab"
+            >
+              <h1 class="title">
+                Tìm số nguyên dương nhỏ nhất sao cho: 1+2+…+ n > 10000
+              </h1>
+
+              <button id="btnBai5" class="btn mt-6">Kết quả:</button>
+              <div id="result5" class="p-4 bg-gray-400 rounded-md mt-6">
+                Result: <span></span>
+              </div>
+            </div>
+            <!-- Bài 6 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50"
+              id="bai6"
+              role="tabpanel"
+              aria-labelledby="contacts-tab"
+            >
+              <h1 class="title">
+                Viết chương trình nhập vào 2 số x, n, tính tổng:
+                S(n)=x+x^2+x^3+…+x^n
+              </h1>
+              <div class="flex space-x-3">
+                <input
+                  id="inputX"
+                  class="rounded-md"
+                  type="text"
+                  placeholder="Nhập số X"
+                />
+                <input
+                  id="inputN"
+                  class="rounded-md"
+                  type="text"
+                  placeholder="Nhập số N"
+                />
+              </div>
+
+              <button id="btnBai6" class="btn mt-6">Kết quả</button>
+              <div id="result6" class="p-4 bg-gray-400 rounded-md mt-6">
+                Result: <span></span>
+              </div>
+            </div>
+            <!-- Bài 7 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50"
+              id="bai7"
+              role="tabpanel"
+              aria-labelledby="contacts-tab"
+            >
+              <h1 class="title">Nhập vào n. Tính giai thừa 1×2×…×n</h1>
+              <input
+                id="inputN7"
+                class="rounded-md"
+                type="text"
+                placeholder="Nhập số N"
+              />
+
+              <button id="btnBai7" class="btn mt-6">Kết quả</button>
+              <div id="result7" class="p-4 bg-gray-400 rounded-md mt-6">
+                Result: <span></span>
+              </div>
+            </div>
+            <!-- Bài 8 -->
+            <div
+              class="hidden p-4 rounded-lg bg-gray-50"
+              id="bai8"
+              role="tabpanel"
+              aria-labelledby="contacts-tab"
+            >
+              <h1 class="title">
+                Viết chương trình có một input, một button. Khi click vào button
+                thì in ra các số nguyên từ 1 tới giá trị của input.
+              </h1>
+              <input
+                id="input8"
+                class="rounded-md"
+                type="text"
+                placeholder="Nhập số N"
+              />
+
+              <button id="btnBai8" class="btn mt-6">Kết quả</button>
+              <div id="result8" class="p-4 bg-gray-400 rounded-md mt-6">
+                Result: <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
